@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Usuários | ApiProjeto</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="toolbar" aria-label="Configuração da API">
+        <div>
+          <p class="eyebrow">ApiProjeto</p>
+          <h1>Usuários</h1>
+        </div>
+
+        <label class="api-field">
+          <span>API</span>
+          <input id="apiBaseUrl" type="url" autocomplete="url" />
+        </label>
+      </section>
+
+      <section class="workspace">
+        <form id="userForm" class="panel form-panel">
+          <div class="panel-heading">
+            <h2>Novo usuário</h2>
+            <p>Cadastre nome e e-mail na API.</p>
+          </div>
+
+          <label>
+            <span>Nome</span>
+            <input id="name" name="name" type="text" placeholder="João da Silva" required />
+          </label>
+
+          <label>
+            <span>E-mail</span>
+            <input id="email" name="email" type="email" placeholder="joao@email.com" required />
+          </label>
+
+          <button id="submitButton" type="submit">
+            <span>Cadastrar</span>
+          </button>
+
+          <p id="formMessage" class="message" role="status" aria-live="polite"></p>
+        </form>
+
+        <section class="panel users-panel" aria-labelledby="usersTitle">
+          <div class="panel-heading users-heading">
+            <div>
+              <h2 id="usersTitle">Lista de usuários</h2>
+              <p id="usersCount">Carregando registros...</p>
+            </div>
+            <button id="refreshButton" class="secondary-button" type="button" title="Atualizar lista">
+              Atualizar
+            </button>
+          </div>
+
+          <div id="emptyState" class="empty-state" hidden>
+            <strong>Nenhum usuário cadastrado ainda.</strong>
+            <span>Quando um cadastro for feito, ele aparece aqui.</span>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>E-mail</th>
+                  <th>Cadastro</th>
+                </tr>
+              </thead>
+              <tbody id="usersTable"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

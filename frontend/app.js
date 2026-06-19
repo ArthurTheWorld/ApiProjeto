@@ -9,7 +9,7 @@ const usersTable = document.querySelector("#usersTable");
 const usersCount = document.querySelector("#usersCount");
 const emptyState = document.querySelector("#emptyState");
 
-const defaultApiUrl = "http://localhost:5000";
+const defaultApiUrl = "/api";
 const savedApiUrl = localStorage.getItem("apiBaseUrl");
 
 apiInput.value = savedApiUrl || defaultApiUrl;

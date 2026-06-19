@@ -17,9 +17,9 @@ services:
     ports:
       - "5000:5000"
 
-  ngix:
+  nginx:
     image: nginx:alpine
-    container_name: ngix
+    container_name: nginx
     depends_on:
       - api
     ports:

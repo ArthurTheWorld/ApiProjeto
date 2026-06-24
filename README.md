@@ -61,6 +61,22 @@ O retorno esperado e:
 }
 ```
 
+## Parar os containers
+
+Para parar a aplicacao:
+
+```bash
+docker compose down
+```
+
+Para parar e remover tambem os dados do banco, use:
+
+```bash
+docker compose down -v
+```
+
+Use `down -v` apenas quando quiser recriar o banco do zero.
+
 ## Endpoints da API
 
 ### Verificar status da API
@@ -105,19 +121,3 @@ Usuario: root
 Senha: root
 Porta: 3306
 ```
-
-## Parar os containers
-
-Para parar a aplicacao:
-
-```bash
-docker compose down
-```
-
-Para parar e remover tambem os dados do banco, use:
-
-```bash
-docker compose down -v
-```
-
-Use `down -v` apenas quando quiser recriar o banco do zero.
